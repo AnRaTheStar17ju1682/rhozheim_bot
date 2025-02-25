@@ -1,7 +1,7 @@
 # Rhozheim bot 💪🤖 💪😤 💪😎
 
 Telegram bot with various unctions: downloading music, saving quotes, receiving current  weather in any place and converting voice messages to text.
-![/start](hello_message.jpg)
+![/start](docs/hello_message.jpg)
 
 ---
 
