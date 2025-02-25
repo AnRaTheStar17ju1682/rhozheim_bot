@@ -1,0 +1,25 @@
+[project]
+name = "rhozheim"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["telegram", "bot"]
+authors = [
+  { name = "AnRaTheStar17ju1682", email = "outworlddevourer1337darklordking666@outlook.com" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+	"aiogram==3.18.0",
+	"vosk==0.3.45",
+	"pydantic-settings==2.7.1"
+]
+
+[project.urls]
+Documentation = "https://github.com/AnRaTheStar17ju1682/rhozheim_bot#README.md"
+Issues = "https://github.com/AnRaTheStar17ju1682/rhozheim_bot/issues"
+Source = "https://github.com/AnRaTheStar17ju1682/rhozheim_bot"
