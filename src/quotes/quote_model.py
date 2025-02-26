@@ -15,8 +15,9 @@ class Quote:
         text_rect_color=(40, 40, 40),
         text_color=(255, 255, 255),
         name_color=(255, 255, 255),
-        font_size=30,
+        font_size=40,
         padding=25,
+        bottom_padding=75,
         corner_radius=30,
         max_width=750,
         line_spacing=18,
@@ -36,6 +37,7 @@ class Quote:
         self.name_color = name_color
         self.font_size = font_size
         self.padding = padding
+        self.bottom_padding = bottom_padding
         self.corner_radius = corner_radius
         self.max_width = max_width
         self.line_spacing = line_spacing
@@ -44,7 +46,7 @@ class Quote:
         self.bold_font_path = bold_font_path
         
         self.text_font = ImageFont.truetype(font_path, self.font_size)
-        self.name_font = ImageFont.truetype(bold_font_path, self.font_size)
+        self.name_font = ImageFont.truetype(bold_font_path, self.font_size*1.1)
         self.text_size_test_probe = ImageDraw.Draw(Image.new('RGBA', (1, 1)))
         
         if not self.avatar:
@@ -113,9 +115,9 @@ class Quote:
     def quote_image(self) -> BytesIO:
         text_rect_image, text_rect_width, text_rect_height = self._process_text()
         image_width = self.bordered_avatar_size + self.padding + text_rect_width
-        image_height = text_rect_height
+        image_height = text_rect_height + self.bottom_padding
         
-        quote_image = Image.new('RGBA', (image_width, image_height), (0, 0, 0, 0))  # Добавили доп. место
+        quote_image = Image.new('RGBA', (image_width, image_height + self.bottom_padding), (0, 0, 0, 0))  # Добавили доп. место
         quote_image.paste(self.avatar, (0, 0+self.padding//2))
         quote_image.paste(text_rect_image, (0 + self.bordered_avatar_size + self.padding, 0))
         
