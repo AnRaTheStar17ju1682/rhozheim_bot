@@ -25,7 +25,7 @@ Telegram bot with various unctions: downloading music, saving quotes, receiving 
 
 ---
 
-### 4. Прогноз погоды 🌤 (`/weather <place location description>`) 
+### 4. Weather check 🌤 (`/weather <place location description>`) 
 **usage example:**  
 ![/weather](docs/weather_command_usage.jpg)
 
